@@ -2,5 +2,8 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import router from './router';
 import store from './store';
+import installAntd from './plugins/antd';
 
-createApp(App).use(store).use(router).mount('#app');
+const app = createApp(App);
+app.use(installAntd);
+app.use(store).use(router).mount('#app');

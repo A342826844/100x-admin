@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 import Home from '../views/Home.vue';
 
+import userPromotionConfig from './userPromotionConfig';
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
     component: Home,
+    meta: {
+      hidden: true,
+    },
   },
   {
     path: '/about',
@@ -19,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes,
+  routes: routes.concat(userPromotionConfig),
 });
 
 export default router;
