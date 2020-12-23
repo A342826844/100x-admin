@@ -8,7 +8,7 @@ axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8';
 // 创建axios实例
 const service = axios.create({
   // axios中请求配置有baseURL选项，表示请求URL公共部分
-  baseURL: process.env.VUE_APP_BASE_API,
+  baseURL: '/api',
   // 超时
   timeout: 10000,
 });
@@ -74,6 +74,17 @@ service.interceptors.response.use((res) => {
     duration: 5 * 1000,
   });
   return Promise.reject(error);
+});
+
+export const getService = (url: string, params?: object) => service({
+  url,
+  params,
+  method: 'get',
+});
+export const postService = (url: string, data?: object) => service({
+  url,
+  data,
+  method: 'post',
 });
 
 export default service;

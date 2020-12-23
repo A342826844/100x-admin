@@ -6,6 +6,15 @@ import {
   Table,
   Tag,
   Divider,
+  Modal,
+  Form,
+  Input,
+  InputNumber,
+  Radio,
+  Checkbox,
+  Select,
+  DatePicker,
+  Switch,
 } from 'ant-design-vue';
 
 export default (app: App) => {
@@ -16,5 +25,14 @@ export default (app: App) => {
     app.use(Table);
     app.use(Tag);
     app.use(Divider);
+    app.use(Modal);
+    app.use(Form);
+    app.use(Input);
+    app.use(InputNumber);
+    app.use(Radio);
+    app.use(Checkbox);
+    app.use(Select);
+    app.use(DatePicker);
+    app.use(Switch);
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <div class="app-layout">
-    <a-layout v-if="!route.meta.hidden" id="components-layout-demo-custom-trigger">
+    <a-layout v-if="route.meta.show" id="components-layout-demo-custom-trigger">
       <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
         <div class="logo" />
         <a-menu theme="dark" mode="inline" v-model:selectedKeys="selectedKeys">
