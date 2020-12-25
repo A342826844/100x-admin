@@ -11,9 +11,11 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
+export const constantRoutes = routes.concat(userPromotionConfig);
+
 const router = createRouter({
   history: createWebHashHistory(process.env.BASE_URL),
-  routes: routes.concat(userPromotionConfig),
+  routes: constantRoutes,
 });
 
 export default router;

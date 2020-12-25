@@ -15,6 +15,9 @@ import {
   Select,
   DatePicker,
   Switch,
+  Row,
+  Col,
+  Card,
 } from 'ant-design-vue';
 
 export default (app: App) => {
@@ -34,5 +37,8 @@ export default (app: App) => {
     app.use(Select);
     app.use(DatePicker);
     app.use(Switch);
+    app.use(Row);
+    app.use(Col);
+    app.use(Card);
   }
 };

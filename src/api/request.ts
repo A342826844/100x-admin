@@ -67,11 +67,7 @@ service.interceptors.response.use((res) => {
   } else if (message.includes('Request failed with status code')) {
     message = `系统接口${message.substr(message.length - 3)}异常`;
   }
-  message({
-    message,
-    type: 'error',
-    duration: 5 * 1000,
-  });
+  Message.error(message, 5);
   return Promise.reject(error);
 });
 
